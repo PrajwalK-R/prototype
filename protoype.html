@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PII Tokenization System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>PII Tokenization System</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#upload">Upload IDs</a></li>
+            <li><a href="#token">Generate Token</a></li>
+            <li><a href="#track">Track Data</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="grid">
+            <section id="upload">
+                <hgroup>
+                    <h2>Upload Government IDs</h2>
+                    <h3>Securely upload your government IDs for tokenization</h3>
+                </hgroup>
+                <p>Upload your government-issued IDs below. Your PII will be encrypted and securely stored on the blockchain.</p>
+                <form enctype="multipart/form-data" action="/upload" method="post">
+                    <label for="govt-id">Choose ID file:</label>
+                    <input type="file" id="govt-id" name="govt-id" required>
+                    <button type="submit">Upload</button>
+                </form>
+            </section>
+
+            <section id="token">
+                <hgroup>
+                    <h2>Generate Token</h2>
+                    <h3>Get your secure, blockchain-based token</h3>
+                </hgroup>
+                <p>Once your ID is uploaded, generate a unique token that can be used for verification across various platforms.</p>
+                <button onclick="generateToken()">Generate Token</button>
+                <p id="token-output">Your token will be displayed here.</p>
+            </section>
+
+            <section id="track">
+                <hgroup>
+                    <h2>Track Data Usage</h2>
+                    <h3>Monitor where your token has been used</h3>
+                </hgroup>
+                <p>Track the usage of your token across different platforms, ensuring transparency and security.</p>
+                <button onclick="trackData()">Track Data Usage</button>
+                <div id="tracking-info"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="container">
+        <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></small>
+    </footer>
+
+    <script>
+        function generateToken() {
+            // Placeholder function for generating token
+            document.getElementById('token-output').innerText = 'Your token: XYZ123ABC456';
+        }
+
+        function trackData() {
+            // Placeholder function for tracking data usage
+            document.getElementById('tracking-info').innerText = 'Token used at Platform A, Platform B, Platform C.';
+        }
+    </script>
+</body>
+</html>
